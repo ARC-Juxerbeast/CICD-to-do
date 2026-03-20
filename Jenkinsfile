@@ -8,12 +8,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'git@github.com:ARC-Juxerbeast/CICD-to-do.git'
-            }
-        }
-
         stage('Build Image') {
             steps {
                 sh 'docker build -t $IMAGE:$TAG .'
